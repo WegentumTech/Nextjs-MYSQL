@@ -18,12 +18,12 @@ export default function handler(req, res) {
 
 
     dbConnection.query(
-        "DELETE FROM NahiBatayenge WHERE id='5';",
+        "UPDATE NahiBatayenge SET Address = 'New Address' WHERE Address = 'Frankfurt';",
         function(err, results, fields) {
             console.log(results);
 
 
-            res.status(200).json(results)
+            res.status(200).json(results[0])
             console.log(err)
 
         }
