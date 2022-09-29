@@ -18,7 +18,7 @@ export default function handler(req, res) {
 
 
     dbConnection.query(
-        "INSERT INTO NahiBatayenge (id, Name, Address, Pata, Naya) VALUES ('1', 'Nitesh',' Mobile', 'Computer',' Hat')",
+        "UPDATE NahiBatayenge SET Name = 'New Name Updated', Address = 'Frankfurt'  WHERE id = 1;",
         function(err, results, fields) {
             console.log(results);
 
