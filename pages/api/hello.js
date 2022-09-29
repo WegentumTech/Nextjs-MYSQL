@@ -18,7 +18,7 @@ export default function handler(req, res) {
 
 
     dbConnection.query(
-        "UPDATE NahiBatayenge SET Name = 'New Name Updated', Address = 'Frankfurt'  WHERE id = 1;",
+        "DELETE FROM NahiBatayenge WHERE id='5';",
         function(err, results, fields) {
             console.log(results);
 
